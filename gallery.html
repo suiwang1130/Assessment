@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Tech Talks</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="gallery.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<main>
+       <nav>
+            <!-- /****************mobile-nav*******************/ -->
+              <div class="mobile-nav">
+								<!-- ################ side menu ################## -->
+								       <div id="mySidenav" class="sidenav">
+								          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                          <a  class="m-menu" href="index.html"><h3>HOME</h3></a>
+													<a  class="m-menu" href="gallery.html"><h3>Gallery</h3></a>
+								          <a  class="m-menu" href="#"><h3>Video Archive</h3></a>
+												  <a class="m-menu" href="#"><h3>About Foxconn</h3></a>
+								       </div>
+											 <div class="humburger-container">
+                       <div><span class="open-menu" onclick="openNav()">
+													<img src="logo/menu-icon.svg" alt="mobile-icon">
+													 </span>
+											 </div>
+										   </div>
+				      </div>
+
+<!--             /****************desktop-nav*******************/ -->
+							<div class="desktop-nav">
+									<div class="ul">
+										<div class="h1-fii"><a class="button-h1" href="index.html"><img src="logo/logo.svg" alt="logo"></a></div>
+										<div><a class="button desk-opt desk-active" href="gallery.html"><h2>Gallery</h2></a></div>
+										<div><a class="button desk-opt" href="#"><h2>Video Archive</h2></a></div>
+										<div><a class="button desk-opt" href="#"><h2>About Foxconn</h2></a></div>
+									</div>
+              </div>
+
+
+			</nav>
+			<script>
+				// ############ side menu ########################
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "100%";
+			}
+
+			function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+			}
+			/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+			function myFunctionD() {
+					document.getElementById("myDropdown").classList.toggle("show");
+						document.getElementById("myDropdown").style.height = "300px";
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+				if (!e.target.matches('.dropbtn')) {
+					var myDropdown = document.getElementById("myDropdown");
+						if (myDropdown.classList.contains('show')) {
+							myDropdown.classList.remove('show');
+						}
+				}
+			}
+
+			// ###################### menu active ######################
+			var optDesk = document.getElementsByClassName("desk-opt");
+			for (var i = 0; i < optDesk.length; i++) {
+			 optDesk[i].addEventListener("click", function() {
+				 var current = document.getElementsByClassName("desk-active");
+				 current[0].className = current[0].className.replace(" desk-active", "");
+				this.className += " desk-active";
+			 });
+		 }
+			// $$$$$$$$$$$$$$$$$$$$$$$$ fdae in ##########################
+			$(window).on("load",function() {
+      $(window).scroll(function() {
+           var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+         }
+        });
+       }).scroll(); //invoke scroll-handler on page-load
+     });
+			</script>
+			<!-- **********************hero**********************  -->
+<div class="gallery">
+
+			<div id="img-container"></div>
+			<script>
+		       var url = "https://picsum.photos/v2/list";
+		       var obj = { table: "author", limit: 30 };
+		       var myObj = "";
+		       var txt = "";
+		       var x = "";
+		       var dbParam = JSON.stringify(obj);
+
+		       var xmlhttp = new XMLHttpRequest();
+			      xmlhttp.onreadystatechange = function() {
+				      if (this.readyState == 4 && this.status == 200) {
+
+					// %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					      myObj = JSON.parse(this.responseText);
+
+					      for (x in myObj) {
+
+					      	txt += '<div class="container fade"><img class="img image" src="https://picsum.photos/id/';
+					      	txt += myObj[x].id;
+					      	txt +='/300/200/" alt="image">';
+					      	txt += '<div class="overlay"><div class="text">' + myObj[x].author;
+					      	txt +='<div class="download"><a href="' + myObj[x].download_url +'" alt="">Download Image</a></div>';
+					      	txt += '</div></div>';
+					      	txt += "</div>";
+					      }
+
+				      	document.getElementById("img-container").innerHTML = txt;
+				      }
+		      	};
+		      	xmlhttp.open("GET", "https://picsum.photos/v2/list", true);
+		      	xmlhttp.send();
+
+			  </script>
+</div>
+
+
+			</main>
+		</body>

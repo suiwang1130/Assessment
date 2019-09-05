@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Tech Talks</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<main>
+<nav>
+
+            <!-- /****************mobile-nav*******************/ -->
+              <div class="mobile-nav">
+								<!-- ################ side menu ################## -->
+								       <div id="mySidenav" class="sidenav">
+                                      <!--	href="javascript = javascript:void(0)     undefined primitive value-->
+								         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+
+                          <a  class="m-menu" href="#"><h3>HOME</h3></a>
+								          <a  class="m-menu" href="#"><h3>Video Archive</h3></a>
+												  <a class="m-menu" href="#"><h3>About Foxconn</h3></a>
+								       </div>
+														 <div class="humburger-container">
+
+
+												   <div><span class="open-menu" onclick="openNav()">
+														 <img src="logo/menu-icon.svg" alt="mobile-icon">
+													 </span></div>
+										</div>
+				  </div>
+
+<!--             /****************desktop-nav*******************/ -->
+							<div class="desktop-nav">
+									<div class="ul">
+                        <div class="h1-fii"><a class="button-h1" href="#"><img src="logo/logo.svg" alt="logo"></a></div>
+												<div><a class="button" href="#"><h2>Video Archive</h2></a></div>
+                        <div><a class="button" href="#"><h2>About Foxconn</h2></a></div>
+									</div>
+              </div>
+
+
+			</nav>
+			<script>
+				// ############ side menu ########################
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "100%";
+			}
+
+			function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+			}
+			/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+			function myFunctionD() {
+					document.getElementById("myDropdown").classList.toggle("show");
+						document.getElementById("myDropdown").style.height = "300px";
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+				if (!e.target.matches('.dropbtn')) {
+					var myDropdown = document.getElementById("myDropdown");
+						if (myDropdown.classList.contains('show')) {
+							myDropdown.classList.remove('show');
+						}
+				}
+			}
+			</script>
+
+
+			<!-- **********************hero**********************  -->
+
+
+                           <div class="landing-img">
+														 <div class="word-container">
+														  <h2>Industrial AI <br>and <br>Smart Displays
+														 </h2>
+														 <p>Thursday, August 29, 2019 <br>1:30 PM to 3:30 PM</p>
+													  </div>
+
+													 <div class="logo-container logo">
+													   <div><img class="foxconn-logo"src="logo/foxconn.svg" alt="foxconn"></div>
+													   <div><img src="logo/tech-talk.svg" alt="tech-talk"></div>
+													   <div><button class="learn-more"><a href="#main-content">Learn More</a></button></div>
+												   </div>
+													</div>
+
+<!--  ###############################################################-->
+
+												<div class="main-background" id="main-content">
+													<div class="main-content animated .animatedFadeInUp fadeInUp">
+
+															<div class="tab-bar clearfix">
+																<button class="tab-button active" onclick="openOpt('Detail')">Details</button>
+                                <button class="tab-button" onclick="openOpt('Agenda')">Agenda</button>
+                                <button class="tab-button" onclick="openOpt('Location')">Location</button>
+                                <button class="tab-button" onclick="openOpt('Speaker')">Speaker</button>
+																<button class="tab-button" onclick="openOpt('SignUp')">Sign up</button>
+                              </div>
+
+
+                              <div class="option-info clearfix">
+															      <div id="Detail" class="option">
+	                                     <h2>Details</h2>
+	                                     <p>As Foxconn develops its Wisconsin operations, an emphasis is put on industrial AI research and its applications. Professor Jay Lee, a leading professor in the study of Industrial AI and vice-chairman of Foxconn Technology Group, will give an introductory lesson on the applications of AI in industry. Chin-Lung Ting, Chief Technologist of Smart Displays of Innolux will give a talk about smart displays. We sincerely invite local tech companies and curious       individuals to learn more about the Foxconn core technologies in the digital transformation of the industry.</p>
+	                                  </div>
+
+															      <div id="Agenda" class="option" style="display:none">
+                                      <h2>The agenda</h2>
+                                      <p>
+                                       <br><br>
+                                       13:20-13:30 Check in<br><br>
+
+                                       13:30-14:30 How AI transforms our Industry - Prof. Jay Lee<br><br>
+
+                                       14:30-15:00 Smart Displays - Chin-Lung Ting<br><br>
+
+                                       15:00-15:30 Discussion</p>
+                                    </div>
+
+														      	<div id="Location" class="option" style="display:none">
+														      		<h2>Location</h2>
+														      		<address><p>611 E Wisconsin Ave. Milwaukee, WI </p> </address>
+														      		<div id="googleMap" style="width:95%;height:300px;margin:0 auto;"></div>
+														      	</div>
+
+														      	<div id="Speaker" class="option" style="display:none">
+															      	<h2>Speaker</h2>
+														      		<img class="speaker"src="image/p1.png" alt="foxconn">
+															      	<img class="speaker"src="image/p2.png" alt="foxconn">
+															      	<p> Join Dr. Jay Lee and Dr. Chin-Lung Ting for an introductory lecture about industry
+																          AI abd smart LCD display technologies which are core Foxconn technologies to transform the digital industry.</p>
+															      </div>
+
+															      <div id="SignUp" class="option" style="display:none">
+															      	<h2>Sign up</h2>
+															      	<p>IMPORTANT:<br>
+                                         This is a RSVP event with limited space. In order to attend you are required to register here and provide your name and organization:
+                                      </p>
+														      		<div class="register"><button><a href="https://www.eventbrite.com/e/foxconn-tech-talks-tickets-70173469737">Register</a></button></div>
+													      			<img class="scan"src="image/scan.png" alt="foxconn">
+												      			</div>
+												      	</div>
+														</div>
+													</div>
+
+														<script>
+                             function openOpt(optName) {
+                               var i;
+                               var x = document.getElementsByClassName("option");
+                               for (i = 0; i < x.length; i++) {
+                                 x[i].style.display = "none";
+                               }
+                               document.getElementById(optName).style.display = "block";
+                             }
+
+														 var opt = document.getElementsByClassName("tab-button");
+														 for (var i = 0; i < opt.length; i++) {
+                              opt[i].addEventListener("click", function() {
+																var current = document.getElementsByClassName("active");
+	                              current[0].className = current[0].className.replace(" active", "");
+	                             this.className += " active";
+                              });
+                            }
+
+
+
+														 function initMap() {
+                                 var myLatLng = {lat: 43.038670, lng: -87.903366};
+
+                                 var map = new google.maps.Map(document.getElementById('googleMap'), {
+                                   zoom: 17,
+                                   center: myLatLng
+                                 });
+
+                                 var marker = new google.maps.Marker({
+                                   position: myLatLng,
+                                   map: map,
+                                   title: 'Hello World!'
+                                 });
+                               }
+														</script>
+														<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1i-N-APF6G3Ofconyu_-lJrZWQcIBf7E&callback=initMap">
+											    </script>
+														<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1i-N-APF6G3Ofconyu_-lJrZWQcIBf7E&callback=myMap"></script> -->
+
+
+
+
+                <!-- /****************main*******************/ -->

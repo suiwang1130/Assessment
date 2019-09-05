@@ -532,6 +532,10 @@ nav .open-menu:hover {
 	.word-container p {
 		margin-left: 10px;
 	}
+	
+	.speaker img {
+		width: 100%;
+	}
 
 
 	.word-container h2 {

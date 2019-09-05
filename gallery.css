@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap&subset=latin-ext');
+
+      #img-container {
+        /*width: 80%;*/
+        margin: 0 auto;
+        height: auto;
+        padding-top: 5.3rem;
+        position: relative;
+
+      }
+       .container {
+          position: relative;
+          width: 33.3%;
+          float: left;
+        }
+
+        .image {
+           display: block;
+           width: 100%;
+           height: auto;
+         }
+
+      .overlay {
+           position: absolute;
+           display: flex;
+           flex-direction: column;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           height: 100%;
+           width: 100%;
+           opacity: 0;
+           transition: .5s ease;
+           background-color: rgba(0, 45, 116, 0.3);
+           transition: 1s;
+      }
+      .download {
+        margin: 1rem;
+
+      }
+
+      .download a {
+        color: #fff;
+        padding: 0.5rem;
+        transition: 1s;
+        border-radius: 5px;
+      }
+      .download a:hover {
+        background: rgba(255, 0, 0, 0.5);
+        border: solid 2px #fff;
+      }
+
+      .container:hover .overlay {
+         opacity: 1;
+       }
+
+      .text {
+        color: white;
+        width: 80%;
+        font-family: 'Ropa Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .gallery {
+        width: 100%;
+        position: relative;
+        background-image: url("image/content-image.png");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+      .fade {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 1000px) {
+         .container{
+           width: 50%;
+         }
+      }
+      @media screen and (max-width: 600px) {
+         .container{
+           width: 100%;
+         }
+         #img-container {
+           padding-top: 10px;
+         }
+      }

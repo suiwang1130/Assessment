@@ -480,6 +480,11 @@ nav .open-menu:hover {
 		margin-left: 80px;
 	}
 
+	.word-container p {
+		margin-left: 80px;
+	}
+
+
 	.learn-more{
 		width: auto;
 	}
@@ -514,6 +519,10 @@ nav .open-menu:hover {
 		margin-right: 10px;
 		flex-direction: column;
 		width: 300px;
+	}
+
+	.word-container p {
+		margin-left: 10px;
 	}
 
 

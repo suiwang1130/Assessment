@@ -16,7 +16,8 @@
 								<!-- ################ side menu ################## -->
 								       <div id="mySidenav" class="sidenav">
 								          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                          <a  class="m-menu" href="#"><h3>HOME</h3></a>
+                          <a  class="m-menu" href="index.html"><h3>HOME</h3></a>
+													<a  class="m-menu" href="gallery.html"><h3>>Gallery</h3></a>
 								          <a  class="m-menu" href="#"><h3>Video Archive</h3></a>
 												  <a class="m-menu" href="#"><h3>About Foxconn</h3></a>
 								       </div>
@@ -31,9 +32,10 @@
 <!--             /****************desktop-nav*******************/ -->
 							<div class="desktop-nav">
 									<div class="ul">
-                        <div class="h1-fii"><a class="button-h1" href="#"><img src="logo/logo.svg" alt="logo"></a></div>
-												<div><a class="button" href="#"><h2>Video Archive</h2></a></div>
-                        <div><a class="button" href="#"><h2>About Foxconn</h2></a></div>
+                        <div class="h1-fii"><a class="button-h1" href="index.html"><img src="logo/logo.svg" alt="logo"></a></div>
+                        <div><a class="button desk-opt" href="gallery.html"><h2>Gallery</h2></a></div>
+												<div><a class="button desk-opt" href="#"><h2>Video Archive</h2></a></div>
+                        <div><a class="button desk-opt" href="#"><h2>About Foxconn</h2></a></div>
 									</div>
               </div>
 
@@ -66,6 +68,7 @@
 			}
 			</script>
 			<!-- **********************hero**********************  -->
+
                            <div class="landing-img">
 														 <div class="word-container">
 														  <h2>Industrial AI <br>and <br>Smart Displays
@@ -149,6 +152,10 @@
                                }
                                document.getElementById(optName).style.display = "block";
                              }
+
+														//  ##### menu #######
+
+													//  ############### tab ##########
 
 														 var opt = document.getElementsByClassName("tab-button");
 														 for (var i = 0; i < opt.length; i++) {

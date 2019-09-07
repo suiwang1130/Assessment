@@ -1,0 +1,383 @@
+/*############## change ################*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Anton|Oswald:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Pavanam&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic|Open+Sans+Condensed:300&display=swap');
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	z-index: 0;
+	/*background-color: #222;*/
+	max-width: 3200px;
+	min-width: 320px;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 110%;
+  margin: 0 auto;
+	min-width: 375px;
+	height: auto;
+}
+
+main {
+	min-width: 320px;
+}
+
+/*#################### mobile nav ######################*/
+
+.humburger-container div {
+	margin: 0 1rem;
+}
+
+.humburger-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.open-menu {
+	width: 50px;
+	height: 50px;
+	font-size: 1rem;
+	top: 0;
+	cursor: pointer;
+	font-family: 'Oswald'  sans-serif;
+}
+/*################  side menu ###################*/
+.sidenav {
+	  height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav h1 {
+			 font-family: 'Oswald', sans-serif;
+			 color: #818181;
+			text-align: center;
+			font-size: 2rem;
+			margin-top: 5rem;
+
+}
+.open-menu {
+	font-size:2rem;top:0;cursor:pointer;font-family: 'Oswald',sans-serif;
+}
+
+.mobile-nav .sidenav a h3 {
+    padding: 0;
+	  text-align: center;
+    text-decoration: none;
+    font-family: 'Ropa Sans', sans-serif !important;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+		font-weight: 600;
+}
+
+#mySidenav span, .wrapper .mobile-nav #mySidenave a {
+	  font-family: 'Oswald',sans-serif;
+}
+
+.sidenav .m-menu:hover, .offcanvas a h3:focus,
+.mySidenav span:hover {
+    color: #f1f1f1;
+}
+
+.sidenav a h3:hover {
+	 color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+		font-weight: 500;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/***************nav****************/
+
+
+
+.mobile-nav {
+  display: none;
+
+}
+
+.humburger-container {
+	font-size:2rem;
+  color: white;
+  font-family: 'Oswald' sans-serif;
+  text-align: center;
+}
+
+.humburger-container {
+	display: flex;
+	opacity: 0.8;
+	align-items: center;
+	justify-content: center;
+}
+
+.humburger-container span {
+	padding-top: 0;
+	padding-bottom: 0.6rem;
+	font-family: 'Oswald' sans-serif;
+}
+
+nav {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  z-index: 100;
+  padding:0.5rem 2rem;
+
+  box-shadow:5px 9px 40px 16px rgba(0, 0, 0, 0.4);
+  }
+
+
+.humburger-container img {
+  padding: 10px 0 8px 0;
+  height: 3rem;
+}
+
+
+
+
+nav .desktop-nav .button h2 {
+	font-size:0.9rem;
+	font-weight: 300;
+  text-align: center;
+}
+
+nav a {
+  color: #90949C;
+  text-decoration: none;
+}
+
+nav .mobile-nav {
+	text-align: right;
+}
+
+nav a:hover,
+nav .open-menu:hover {
+	color: grey;
+}
+
+
+/*##############  button ################*/
+
+
+main nav .desktop-nav {
+  width: 70%;
+  margin: 0 auto;
+  /*background: red;*/
+
+}
+
+
+.desktop-nav  a {
+  text-align: center;
+  font-size:10px;
+	/*margin:  0.5em;*/
+}
+.desktop-nav .ul .h1-fii {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.desktop-nav .desk-links {
+
+  height: auto;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+nav .desktop-nav .h1-fii {
+ display:inline-block;
+ width: 110px;
+ color: rgb(0, 45, 116);
+ font-size: 22px;
+ font-family: 'Ropa Sans', sans-serif;
+ font-weight: 300;
+ padding-top: 5px;
+}
+
+nav .desktop-nav .h1-fii img {
+  width: 110px;
+}
+
+
+.button-h1 {
+  margin-left: 0.5rem;
+}
+
+.button {
+    border: none;
+    font-size:1.8rem;
+    color: #254881;
+    width: 90px;
+     font-family: 'Ropa Sans', sans-serif;
+    padding: 0;
+		margin: 0 ;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:hover{
+	border-bottom: 2px #222 solid;
+}
+.desk-active {
+	/*border-bottom: 2px grey solid;*/
+}
+/*######### hero ###########*/
+
+.hero-image {
+  width: 100%;
+  height: 320px;
+  background-image: url("image/JayLee.jpg");
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-size: 120% auto;
+  background-position: 50% 30%;
+  overflow: hidden;
+
+}
+
+.content {
+  width: 65%;
+  height: auto;
+  margin: 1rem auto;
+  padding: 2em 0;
+}
+
+.sub-content-1 {
+  float: left;
+  padding: 0.5rem 1.5rem 1.5rem 0;
+  width: 45%;
+  height: auto;
+
+}
+.sub-content-2 img {
+  width: 100%;
+  height: auto;
+}
+
+
+.sub-content-2 {
+  float: left;
+  padding: 1rem 0.5rem 0 2.4rem;
+  width: 55%;
+  height: 500px;
+
+}
+.content  .sub-content-1 p  {
+  font-family: 'Carrois Gothic', sans-serif;
+  font-weight: 300;
+  line-height: 2;
+  font-size: 0.8rem;
+}
+.button-register {
+  padding: 0.5rem 1.5rem;
+  background: #C10230;
+  border-radius: 18px;
+  margin-top: 1.6rem;
+}
+.button-register a {
+  font-family: 'Carrois Gothic', sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+.content .sub-content-1 h2 {
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 1.7rem;
+}
+/*############ footer #############*/
+footer .footer {
+  width: 100%;
+  height: 45px;
+  background-color: #222;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+/*#######################*/
+@media screen and (max-width: 1200px){
+  .content .sub-content-1, .content .sub-content-2 {
+    width: 100%;
+    padding: 1rem;
+
+  }
+    .content .sub-content-1{
+      height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 990px){
+	.button {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 940px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+  .content .sub-content-1, .content .sub-content-2 {
+    width: 100%;
+  }
+  .content {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+}
+
+
+@media screen and (max-width:945px) {
+  nav a {
+  padding:0 5px;
+  }
+
+}
+
+
+@media screen and (max-width:455px){
+	.mobile-nav .humburger-container {
+		text-align: center;
+	}
+
+	.mobile-nav .log-in-mobile {
+		display: none;
+	}
+
+.clearfix::after {
+ content: "";
+ display: table;
+ clear: both;
+ }

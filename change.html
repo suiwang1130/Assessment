@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Tech Talks</title>
+		<link rel="stylesheet" href="change.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<main>
+       <nav>
+            <!-- /****************mobile-nav*******************/ -->
+              <div class="mobile-nav">
+								<!-- ################ side menu ################## -->
+								       <div id="mySidenav" class="sidenav">
+								          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                          <a  class="m-menu" href="index.html"><h3>HOME</h3></a>
+													<a  class="m-menu" href="#"><h3>Career</h3></a>
+								          <a  class="m-menu" href="#"><h3>Tech Talks</h3></a>
+												  <a class="m-menu" href="#"><h3>Contact</h3></a>
+								       </div>
+											 <div class="humburger-container">
+                       <div><span class="open-menu" onclick="openNav()">
+													<img src="logo/menu-icon.svg" alt="mobile-icon">
+													 </span>
+											 </div>
+										   </div>
+				      </div>
+
+<!--             /****************desktop-nav*******************/ -->
+							<div class="desktop-nav">
+									<!-- <div class="ul" style="width: 40%;"> -->
+										<a class="h1-fii button-h1" href="index.html"><img src="logo/logo-1.png" alt="logo"></a>
+										<!-- </div> -->
+
+									<div class="desk-links" style="float: right;">
+
+									   <a class="button desk-opt desk-active" href="#"><h2>Careers</h2></a>
+									   <a class="button desk-opt" href="#"><h2>Tech Talks</h2></a>
+									   <a class="button desk-opt" href="#"><h2>Contact</h2></a>
+									</div>
+              </div>
+
+
+			</nav>
+			<script>
+				// ############ side menu ########################
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "100%";
+			}
+
+			function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+			}
+			/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+			function myFunctionD() {
+					document.getElementById("myDropdown").classList.toggle("show");
+						document.getElementById("myDropdown").style.height = "300px";
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+				if (!e.target.matches('.dropbtn')) {
+					var myDropdown = document.getElementById("myDropdown");
+						if (myDropdown.classList.contains('show')) {
+							myDropdown.classList.remove('show');
+						}
+				}
+			}
+
+
+
+			</script>
+			<!-- **********************hero**********************  -->
+
+			<div class="hero-image clearfix">
+
+			</div>
+
+			<div class="content clearfix">
+				<div class="sub-content-1 clearfix">
+					<h2>Tech Talks</h2>
+					<p>As Foxconn developer its Wisconsin operstions, an emphasis is put
+						on industrial AI research and its applications. Foxconn Tech Talks are
+						a platform for industry leader to give presentations on how AI, IoT, and SG
+			      will transform the future of industry.</p>
+					<p>We sincerely invite local tech companies and curious individuals to learn more about
+						Foxconn core techonlogies in the digital transformation of the industry.</p>
+					<button class="button-register"><a>REGISTER NOW</a></button>
+
+				</div>
+
+				<div class="sub-content-2 clearfix" >
+					<img src="image/techtalkabout.png" alt="">
+				</div>
+
+			</div>
+
+
+			</main>
+			<!-- ############ footer ########### -->
+			<footer>
+				<div class="footer"></div>
+
+			</footer>
+		</body>

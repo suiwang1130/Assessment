@@ -10,3 +10,4 @@ The new changes have been added in a new branch.<br>
 The two branches have been merged.<br>
 <br><br>
 The mockup page has completed and turned into a functioning landing page.
+The "Photo Gallery" can also be seen on http://sui-wang.com/foxconn/gallery.html/change.html
